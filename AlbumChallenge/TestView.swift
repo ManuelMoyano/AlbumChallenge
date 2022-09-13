@@ -1,5 +1,5 @@
 //
-//  Photosview.swift
+//  TestView.swift
 //  AlbumChallenge
 //
 //  Created by Manuel Moyano on 13/09/2022.
@@ -7,33 +7,32 @@
 
 import SwiftUI
 
-struct Photosview: View {
+struct TestView: View {
     var album: Album
     @State private var photos = [Photo]()
     let layout = [
         GridItem(.adaptive(minimum: 150))
     ]
     
-    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: layout) {
                 ForEach (photos, id: \.self) { photo in
+                    VStack{
                         NavigationLink{
                             DetailPhotoView(photo: photo)
                         } label: {
-                            VStack{
-                                AsyncImage(url: URL(string: "\(photo.thumbnailUrl)")) { image in
-                                    image.resizable()
-                                } placeholder: {
-                                    Color.gray
-                                }
-                                .frame(width: 150, height: 150)
-                                .clipShape(RoundedRectangle(cornerRadius: 10))
-                                Text(photo.title)
-                                    .frame(width: 150, height: 60, alignment: .center)
+                            AsyncImage(url: URL(string: "\(photo.thumbnailUrl)")) { image in
+                                image.resizable()
+                            } placeholder: {
+                                Color.gray
                             }
+                            .frame(width: 150, height: 150)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            Text(photo.title)
+                                .frame(width: 150, height: 150, alignment: .center)
                         }
+                    }
                 }
             }
         }
@@ -45,13 +44,11 @@ struct Photosview: View {
             }
 
         }
-        .navigationBarTitle(album.title)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
-struct Photosview_Previews: PreviewProvider {
+struct TestView_Previews: PreviewProvider {
     static var previews: some View {
-        Photosview(album: Album(userId: 1, id: 1, title: "Title"))
+        TestView(album: Album(userId: 1, id: 1, title: "Title"))
     }
 }

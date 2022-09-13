@@ -17,6 +17,7 @@
 		3C4E23DA28D09F1D006C9204 /* Photosview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D928D09F1D006C9204 /* Photosview.swift */; };
 		3C4E23DC28D0A0AD006C9204 /* DetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */; };
 		3C4E23DF28D0A242006C9204 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4E23DE28D0A242006C9204 /* Alamofire */; };
+		3C4E23E128D0D803006C9204 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23E028D0D802006C9204 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3C4E23D728D09E56006C9204 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		3C4E23D928D09F1D006C9204 /* Photosview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photosview.swift; sourceTree = "<group>"; };
 		3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoView.swift; sourceTree = "<group>"; };
+		3C4E23E028D0D802006C9204 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				3C4E23D728D09E56006C9204 /* AlbumView.swift */,
 				3C4E23D928D09F1D006C9204 /* Photosview.swift */,
 				3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */,
+				3C4E23E028D0D802006C9204 /* TestView.swift */,
 				3C4E23C528D09C60006C9204 /* Assets.xcassets */,
 				3C4E23C728D09C60006C9204 /* Preview Content */,
 			);
@@ -180,6 +183,7 @@
 				3C4E23D828D09E56006C9204 /* AlbumView.swift in Sources */,
 				3C4E23D328D09CAA006C9204 /* Photo.swift in Sources */,
 				3C4E23D628D09D98006C9204 /* NetWorking.swift in Sources */,
+				3C4E23E128D0D803006C9204 /* TestView.swift in Sources */,
 				3C4E23DA28D09F1D006C9204 /* Photosview.swift in Sources */,
 				3C4E23C228D09C5C006C9204 /* AlbumChallengeApp.swift in Sources */,
 				3C4E23D128D09C9B006C9204 /* Album.swift in Sources */,

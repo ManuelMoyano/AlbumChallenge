@@ -18,7 +18,12 @@ struct AlbumView: View {
                         NavigationLink {
                             Photosview(album: album)
                         } label: {
-                            Text(album.title)
+                            HStack{
+                                Image(systemName: "folder.circle.fill")
+                                    .foregroundColor(.yellow)
+                                    .font(.system(size: 50))
+                                Text(album.title)
+                            }
                         }
                     }
                 }
@@ -30,7 +35,6 @@ struct AlbumView: View {
             } failure: { error in
                 print("Error al cargar los albums")
             }
-
         }
     }
 }
