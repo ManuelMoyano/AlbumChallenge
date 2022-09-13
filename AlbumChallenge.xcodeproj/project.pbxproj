@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		3C4E23C228D09C5C006C9204 /* AlbumChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23C128D09C5C006C9204 /* AlbumChallengeApp.swift */; };
-		3C4E23C428D09C5C006C9204 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23C328D09C5C006C9204 /* ContentView.swift */; };
 		3C4E23C628D09C60006C9204 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E23C528D09C60006C9204 /* Assets.xcassets */; };
 		3C4E23C928D09C60006C9204 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E23C828D09C60006C9204 /* Preview Assets.xcassets */; };
+		3C4E23D128D09C9B006C9204 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D028D09C9B006C9204 /* Album.swift */; };
+		3C4E23D328D09CAA006C9204 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D228D09CAA006C9204 /* Photo.swift */; };
+		3C4E23D628D09D98006C9204 /* NetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D528D09D98006C9204 /* NetWorking.swift */; };
+		3C4E23D828D09E56006C9204 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D728D09E56006C9204 /* AlbumView.swift */; };
+		3C4E23DA28D09F1D006C9204 /* Photosview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23D928D09F1D006C9204 /* Photosview.swift */; };
+		3C4E23DC28D0A0AD006C9204 /* DetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */; };
+		3C4E23DF28D0A242006C9204 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3C4E23DE28D0A242006C9204 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C4E23BE28D09C5C006C9204 /* AlbumChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4E23C128D09C5C006C9204 /* AlbumChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumChallengeApp.swift; sourceTree = "<group>"; };
-		3C4E23C328D09C5C006C9204 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C4E23C528D09C60006C9204 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C4E23C828D09C60006C9204 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C4E23D028D09C9B006C9204 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		3C4E23D228D09CAA006C9204 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3C4E23D528D09D98006C9204 /* NetWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorking.swift; sourceTree = "<group>"; };
+		3C4E23D728D09E56006C9204 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		3C4E23D928D09F1D006C9204 /* Photosview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photosview.swift; sourceTree = "<group>"; };
+		3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4E23DF28D0A242006C9204 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +63,12 @@
 		3C4E23C028D09C5C006C9204 /* AlbumChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				3C4E23D428D09D73006C9204 /* NetWorkingProvider */,
+				3C4E23CF28D09C80006C9204 /* Data */,
 				3C4E23C128D09C5C006C9204 /* AlbumChallengeApp.swift */,
-				3C4E23C328D09C5C006C9204 /* ContentView.swift */,
+				3C4E23D728D09E56006C9204 /* AlbumView.swift */,
+				3C4E23D928D09F1D006C9204 /* Photosview.swift */,
+				3C4E23DB28D0A0AD006C9204 /* DetailPhotoView.swift */,
 				3C4E23C528D09C60006C9204 /* Assets.xcassets */,
 				3C4E23C728D09C60006C9204 /* Preview Content */,
 			);
@@ -65,6 +81,23 @@
 				3C4E23C828D09C60006C9204 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C4E23CF28D09C80006C9204 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3C4E23D028D09C9B006C9204 /* Album.swift */,
+				3C4E23D228D09CAA006C9204 /* Photo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3C4E23D428D09D73006C9204 /* NetWorkingProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3C4E23D528D09D98006C9204 /* NetWorking.swift */,
+			);
+			path = NetWorkingProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,9 @@
 			dependencies = (
 			);
 			name = AlbumChallenge;
+			packageProductDependencies = (
+				3C4E23DE28D0A242006C9204 /* Alamofire */,
+			);
 			productName = AlbumChallenge;
 			productReference = 3C4E23BE28D09C5C006C9204 /* AlbumChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 3C4E23B528D09C5C006C9204;
+			packageReferences = (
+				3C4E23DD28D0A242006C9204 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 3C4E23BF28D09C5C006C9204 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4E23C428D09C5C006C9204 /* ContentView.swift in Sources */,
+				3C4E23DC28D0A0AD006C9204 /* DetailPhotoView.swift in Sources */,
+				3C4E23D828D09E56006C9204 /* AlbumView.swift in Sources */,
+				3C4E23D328D09CAA006C9204 /* Photo.swift in Sources */,
+				3C4E23D628D09D98006C9204 /* NetWorking.swift in Sources */,
+				3C4E23DA28D09F1D006C9204 /* Photosview.swift in Sources */,
 				3C4E23C228D09C5C006C9204 /* AlbumChallengeApp.swift in Sources */,
+				3C4E23D128D09C9B006C9204 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +320,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,7 +349,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C4E23DD28D0A242006C9204 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C4E23DE28D0A242006C9204 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C4E23DD28D0A242006C9204 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C4E23B628D09C5C006C9204 /* Project object */;
 }
