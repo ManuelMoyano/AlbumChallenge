@@ -17,5 +17,7 @@ struct Album: Decodable, Hashable {
     let userId: Int
     let id: Int
     let title: String
+    
+    static let example = Album(userId: 1, id: 1, title: "Album Title")
 }
 

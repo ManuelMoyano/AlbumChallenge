@@ -11,7 +11,7 @@ struct Photosview: View {
     var album: Album
     @State private var photos = [Photo]()
     let layout = [
-        GridItem(.adaptive(minimum: 150))
+        GridItem(.adaptive(minimum: 70))
     ]
     
     
@@ -28,10 +28,10 @@ struct Photosview: View {
                                 } placeholder: {
                                     Color.gray
                                 }
-                                .frame(width: 150, height: 150)
+                                .frame(width: 75, height: 75)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                                Text(photo.title)
-                                    .frame(width: 150, height: 60, alignment: .center)
+//                                Text(photo.title)
+//                                    .frame(width: 150, height: 60, alignment: .center)
                             }
                         }
                 }
