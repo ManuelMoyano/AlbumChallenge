@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ScrollIconAlbumView: View {
     var albums: [Album]
+    @Binding var scrollIndex: Int
     
     var body: some View {
 
@@ -16,6 +17,9 @@ struct ScrollIconAlbumView: View {
             VStack(spacing: 10) {
                 ForEach(0..<albums.count, id: \.self) { i in
                     IconAlbumView(album: albums[i])
+                        .onTapGesture {
+                            scrollIndex = i
+                        }
                 }
             }
         }
@@ -25,6 +29,6 @@ struct ScrollIconAlbumView: View {
 
 struct ScrollIconAlbumView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollIconAlbumView(albums: [Album]())
+        ScrollIconAlbumView(albums: [Album](), scrollIndex: .constant(0))
     }
 }
