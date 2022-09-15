@@ -14,17 +14,19 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             HStack{
+                if albums.count > 0 {
                 ScrollIconAlbumView(albums: albums, scrollIndex: $scrollIndex)
-//                Text("\(scrollIndex)")
-                if scrollIndex > 0 {
+                        .padding(.top, 1)
                     Photosview(album: albums[scrollIndex])
+                        .padding(.top, 1)
                 } else {
                     Rectangle()
                         .foregroundColor(.gray)
                 }
             }
             .navigationBarTitle("Albums")
-        }.onAppear {
+        }
+        .onAppear {
             NetWorking.shared.getAlbumsAlamofire { response in
                 albums = response
             } failure: { error in

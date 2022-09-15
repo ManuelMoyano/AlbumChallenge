@@ -9,19 +9,10 @@ import SwiftUI
 
 @main
 struct AlbumChallengeApp: App {
-    @StateObject var albums = Albums()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .onAppear {
-                    NetWorking.shared.getAlbumsAlamofire { response in
-                        albums.albums = response
-                    } failure: { error in
-                        print("Error al cargar los albums")
-                    }
-                }
-                .environmentObject(albums)
         }
     }
 }

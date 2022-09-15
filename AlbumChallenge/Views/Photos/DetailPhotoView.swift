@@ -12,6 +12,8 @@ struct DetailPhotoView: View {
     
     var body: some View {
         VStack{
+            Text(photo.title)
+                .font(.system(size: 30))
             AsyncImage(url: URL(string: "\(photo.url)")) { image in
                 image.resizable()
             } placeholder: {
@@ -19,6 +21,7 @@ struct DetailPhotoView: View {
             }
             .scaledToFit()
             .clipShape(RoundedRectangle(cornerRadius: 25))
+            .padding()
         }
     }
 }
