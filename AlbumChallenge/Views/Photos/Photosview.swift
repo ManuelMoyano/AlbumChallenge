@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Photosview: View {
     var album: Album
-    @State private var photos = [Photo]()
+    @State var photos: [Photo]
     let layout = [
         GridItem(.adaptive(minimum: 70))
     ]
@@ -30,20 +30,10 @@ struct Photosview: View {
                                 }
                                 .frame(width: 75, height: 75)
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
-//                                Text(photo.title)
-//                                    .frame(width: 150, height: 60, alignment: .center)
                             }
                         }
                 }
             }
-        }
-        .onAppear {
-            NetWorking.shared.getPhotosAlamofire(album: album.id) { response in
-                photos = response
-            } failure: { error in
-                print ("Error al cargar las fotos")
-            }
-
         }
         .navigationBarTitle(album.title)
         .navigationBarTitleDisplayMode(.inline)
@@ -52,6 +42,6 @@ struct Photosview: View {
 
 struct Photosview_Previews: PreviewProvider {
     static var previews: some View {
-        Photosview(album: Album(userId: 1, id: 1, title: "Title"))
+        Photosview(album: Album(userId: 1, id: 1, title: "Title"), photos: [Photo]())
     }
 }

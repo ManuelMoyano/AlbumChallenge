@@ -9,26 +9,37 @@ import SwiftUI
 
 struct ScrollIconAlbumView: View {
     var albums: [Album]
-    @Binding var scrollIndex: Int
+    @State var scrollIndex = 0
+    @State var photos = [Photo]()
     
     var body: some View {
-
-        ScrollView {
-            VStack(spacing: 10) {
-                ForEach(0..<albums.count, id: \.self) { i in
-                    IconAlbumView(album: albums[i])
-                        .onTapGesture {
-                            scrollIndex = i
-                        }
+        
+        HStack{
+            ScrollView {
+                VStack(spacing: 10) {
+                    ForEach(0..<albums.count, id: \.self) { i in
+                        IconAlbumView(album: albums[i])
+                            .onTapGesture {
+                                scrollIndex = i
+                                NetWorking.shared.getPhotosAlamofire(album: albums[scrollIndex].id) { response in
+                                    photos = response
+                                } failure: { error in
+                                    print ("Error al cargar las fotos")
+                                }
+                            }
+                    }
                 }
             }
+            .frame(width: 110)
+            
+            Photosview(album: albums[scrollIndex], photos: photos)
+                .padding(.top, 1)
         }
-        .frame(width: 110)
     }
 }
 
 struct ScrollIconAlbumView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollIconAlbumView(albums: [Album](), scrollIndex: .constant(0))
+        ScrollIconAlbumView(albums: [Album]())
     }
 }

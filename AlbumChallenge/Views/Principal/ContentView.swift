@@ -9,19 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var albums = [Album]()
-    @State var scrollIndex = 0
     
     var body: some View {
         NavigationView{
             HStack{
                 if albums.count > 0 {
-                ScrollIconAlbumView(albums: albums, scrollIndex: $scrollIndex)
-                        .padding(.top, 1)
-                    Photosview(album: albums[scrollIndex])
+                ScrollIconAlbumView(albums: albums)
                         .padding(.top, 1)
                 } else {
-                    Rectangle()
-                        .foregroundColor(.gray)
+                    ProgressView()
                 }
             }
             .navigationBarTitle("Albums")
