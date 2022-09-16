@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Photosview: View {
     var album: Album
-    @State var photos: [Photo]
+    var photos: [Photo]
     let layout = [
         GridItem(.adaptive(minimum: 70))
     ]

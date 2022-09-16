@@ -20,7 +20,9 @@ struct ScrollIconAlbumView: View {
                     ForEach(0..<albums.count, id: \.self) { i in
                         IconAlbumView(album: albums[i])
                             .onTapGesture {
+                                
                                 scrollIndex = i
+                                
                                 NetWorking.shared.getPhotosAlamofire(album: albums[scrollIndex].id) { response in
                                     photos = response
                                 } failure: { error in
